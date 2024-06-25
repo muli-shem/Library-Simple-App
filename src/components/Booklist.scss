@@ -1,0 +1,108 @@
+/* src/components/BookList.module.scss */
+
+.book-list {
+    max-width: 600px;
+    margin: 2rem auto;
+  
+    input[type='text'] {
+      width: 95%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out;
+      
+  
+      &:focus {
+        outline: none;
+        border-color: #4a90e2;
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin-bottom: 1rem;
+    
+  
+      th,
+      td {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+      }
+  
+      th {
+        background-color: #f0f0f0;
+        text-align: left;
+      }
+  
+      td {
+        text-align: left;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+  
+      tr:hover {
+        background-color: #f0f0f0;
+      }
+  
+      .actions button {
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        background-color: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #357bd8;
+        }
+      }
+    }
+  
+    .pagination {
+      margin-top: 1rem;
+  
+      button {
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        background-color: #4a90e2;
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+  
+        &:hover:not(:disabled) {
+          background-color: #357bd8;
+        }
+      }
+    }
+  }
+.pagination-buttons{
+  display: flex;
+  justify-content: space-between;
+} 
+.delete-btn{
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover:not(:disabled) {
+    background-color: #357bd8;
+    
+  }
+}
+
