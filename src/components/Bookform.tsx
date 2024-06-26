@@ -27,15 +27,15 @@ const BookForm: React.FC<BookFormProps> = ({ onSubmit, initialBook }) => {
     <form onSubmit={handleSubmit} className="book-form p-4 border rounded shadow">
       <div className="form-group mb-4">
         <label className="form-label block mb-2">Title:</label>
-        <input ref={titleRef} defaultValue={initialBook?.title} className="form-input w-full p-2 border rounded" />
+        <input ref={titleRef} defaultValue={initialBook?.title} className="form-input w-full p-1.5 border rounded" />
       </div>
       <div className="form-group mb-4">
         <label className="form-label block mb-2">Author:</label>
-        <input ref={authorRef} defaultValue={initialBook?.author} className="form-input w-full p-2 border rounded" />
+        <input ref={authorRef} defaultValue={initialBook?.author} className="form-input w-full p-1.5 border rounded" />
       </div>
       <div className="form-group mb-4">
         <label className="form-label block mb-2">Year:</label>
-        <input ref={yearRef} defaultValue={initialBook?.year} className="form-input w-full p-2 border rounded" />
+        <input ref={yearRef} defaultValue={initialBook?.year} className="form-input w-full p-1.5 border rounded" />
       </div>
       <button type="submit" className="submit-btn bg-blue-500 text-white p-2 rounded">Submit</button>
     </form>

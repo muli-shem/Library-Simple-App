@@ -1,13 +1,14 @@
 /* src/components/BookList.module.scss */
 
 .book-list {
-    max-width: 600px;
-    margin: 2rem auto;
+    max-width: 800px;
+    margin: 1rem auto;
+    background-color: #f0f0f0;
   
     input[type='text'] {
       width: 95%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
+      padding: 0.1rem;
+      margin-bottom: 0.1rem;
       border: 1px solid #ddd;
       border-radius: 0.25rem;
       transition: border-color 0.15s ease-in-out;
@@ -23,7 +24,7 @@
       width: 100%;
       border-collapse: collapse;
       border-spacing: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     
   
       th,
@@ -103,6 +104,9 @@
   &:hover:not(:disabled) {
     background-color: #357bd8;
     
+  }
+  .Titles{
+    background-color: aqua;
   }
 }
 
