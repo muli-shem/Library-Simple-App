@@ -22,10 +22,12 @@ const BookList: React.FC<BookListProps> = ({ books, onEdit, onDelete }) => {
   const [editAuthor, setEditAuthor] = useState('');
   const [editYear, setEditYear] = useState('');
 
+  // Filter books based on search term
   const filteredBooks = books.filter(book =>
-    book.title.toLowerCase().includes(searchTerm.toLowerCase())
+    book?.title?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Pagination
   const booksPerPage = 5;
   const totalPages = Math.ceil(filteredBooks.length / booksPerPage);
 
@@ -34,6 +36,7 @@ const BookList: React.FC<BookListProps> = ({ books, onEdit, onDelete }) => {
     currentPage * booksPerPage
   );
 
+  // Handlers for pagination
   const handleNextPage = useCallback(() => {
     if (currentPage < totalPages) {
       setCurrentPage(prevPage => prevPage + 1);
@@ -46,10 +49,12 @@ const BookList: React.FC<BookListProps> = ({ books, onEdit, onDelete }) => {
     }
   }, [currentPage]);
 
+  // Reset current page when search term changes
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm]);
 
+  // Edit book handlers
   const handleEdit = (book: Book) => {
     setEditBookId(book.id);
     setEditTitle(book.title);
